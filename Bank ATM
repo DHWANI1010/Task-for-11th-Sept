@@ -1,0 +1,58 @@
+#include<stdio.h>
+int main(){
+
+float a,b,c,d,e,f;
+int balance=3000;
+int choice;
+ do{
+ 	printf("\n\nWelcome to XYZ bank\n\n");
+ 	printf("\n 1.Check your balance");
+ 	printf("\n 2.Withdraw money from the account");
+ 	printf("\n 3.Deposit");
+ 	printf("\n 4.Deposit cheque");
+ 	printf("\n 5.Exit");
+ 	printf("\nEnter the number of your choice:");
+ 	scanf("%d",&choice);
+ 	
+ 	switch(choice){
+ 		case 1:
+ 			printf("Your current balance is %d",balance);
+ 			break;
+ 			
+ 		case 2:
+ 				printf("Enter the amount to be withdraw:");
+ 				scanf("%f",&a);
+ 				d= balance-a;
+ 			if (a>balance){
+ 				printf("Insufficient balance, enter less value:");
+			 }
+			 else {
+			 	printf("Your current balance is %f",d);
+			 }
+			 break;
+		case 3:
+			printf("Enter the amount to be deposit:");
+			scanf("%f",&b);
+			e= b+balance;
+			printf("Your current balance is %f",e);
+			break;
+			
+		case 4:
+			printf("Enter the amount of the cheque to be deposit:");
+			scanf("%f",&c);
+			f= balance+c;
+			printf("Your current balance is %f",f);
+			break;
+		
+		case 5:
+		printf("Exiting");
+		break;
+		
+		default:
+			printf("\nInvalid.Try again\n");
+		
+	 }
+ }
+ while (choice!=5);
+ return 0;
+}
